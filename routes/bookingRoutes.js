@@ -6,10 +6,9 @@ const router = express.Router();
 
 router.use(authController.protect);
     
-// This is for the development implementation of stripe checkout
-// router.get('/checkout-session/:tourId', 
-//     bookingController.getCheckoutSession
-// );
+router.get('/checkout-session/:tourId', 
+    bookingController.getCheckoutSession
+);
 
 router.use(authController.restrictTo('admin', 'lead-guide'));
 
