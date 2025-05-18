@@ -11,7 +11,6 @@ module.exports = class Email {
     }
 
     newTransport() {
-        console.log(process.env.BREVO_LOGIN, process.env.BREVO_PASSWORD)
         if(process.env.NODE_ENV === 'production') {
             return nodemailer.createTransport({
 
